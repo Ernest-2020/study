@@ -1,0 +1,49 @@
+						Задание 1.
+
+Проанализировав ранее написаные проекты, обнаружил что пользовался следующими антипатернами:
+
+	Bike-shed
+	Blind faith 
+	Copy and Paste Programming
+	Programming by permutation 
+	Reinventing the square wheel
+	Reinventing the wheel 
+					
+						Задание 2.
+
+Архитектура в проекте нужна для того, что бы снизить сложность проектирования, чтобы было комфортно проектировать
+совместно с другими програмистами, чтобы код был максимально всем, кто занимается этим проектом.
+
+
+						Задание 3.
+
+static void Main(string[] args)
+        {
+            Console.WriteLine("Здравствуйте вас приветствует математическая программа");
+            Console.WriteLine("пажалуйста введите число. ");
+
+            String ReadStr = Console.ReadLine();
+
+            if (ReadStr == "q")
+            {
+                return;
+            }
+            int Readint = Int32.Parse(ReadStr);
+            int factorial = 1;
+            int SumNum = 0;
+            int MaxEvenNum = 0;
+            for (int i = 1; i <= Readint; i++)
+            {
+                factorial = factorial * i;
+                SumNum = SumNum + i;
+                if (i % 2 == 0)
+                {
+                    MaxEvenNum = i;
+                }
+            }
+            Console.WriteLine("Факториал равет " + factorial); Console.WriteLine("Сума от 1 до N равна " + SumNum);
+
+            Console.WriteLine("максимальное четное число меньше N равно " + MaxEvenNum);
+            Console.ReadLine();
+
+        }
